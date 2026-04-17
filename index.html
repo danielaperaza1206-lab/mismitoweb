@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Horario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+ 
+
+<body>
+ <header class="encabezado">Registro de Horario de Clases 3</header>
+  <div>
+  <!-- FORMULARIO -->
+  <form id="formHorario">
+    <label for="materia">Materia:</label>
+    <input type="text" id="materia" name="materia" required placeholder="ej. Introducción a la Programación Web">
+   
+    <label for="dia">Día:</label>
+    <select id="dia" name="dia" required>
+      <option value="">-- Selecciona --</option>
+      <option value="Lunes">Lunes</option>
+      <option value="Martes">Martes</option>
+      <option value="Miércoles">Miércoles</option>
+      <option value="Jueves">Jueves</option>
+      <option value="Viernes">Viernes</option>
+    </select>
+   
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" name="hora" required>
+   
+    <label for="aula">Aula:</label>
+    <input type="text" id="aula" name="aula" required placeholder="ej. Lab-3">
+   
+    <button type="submit">Agregar al horario</button>
+  </form>
+  </div>
+  <div>
+  <!-- TABLA DE VISUALIZACIÓN -->
+  <h2>Mi Horario</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Materia</th>
+        <th>Día</th>
+        <th>Hora</th>
+        <th>Aula</th>
+      </tr>
+    </thead>
+    <tbody id="tablaCuerpo">
+      <!-- Aquí se agregarán las filas dinámicamente -->
+    </tbody>
+  </table>
+</div>
+  <script>
+    // Script básico para agregar filas (sin persistencia)
+    document.getElementById('formHorario').addEventListener('submit', function(e) {
+      e.preventDefault();
+     
+      // Obtener valores
+      const materia = document.getElementById('materia').value;
+      const dia = document.getElementById('dia').value;
+      const hora = document.getElementById('hora').value;
+      const aula = document.getElementById('aula').value;
+     
+      // Crear nueva fila
+      const fila = document.createElement('tr');
+      fila.innerHTML = `<td>${materia}</td><td>${dia}</td><td>${hora}</td><td>${aula}</td>`;
+     
+      // Agregar a la tabla
+      document.getElementById('tablaCuerpo').appendChild(fila);
+     
+      // Limpiar formulario
+      this.reset();
+    });
+  </script>
+</body>
+</html>
