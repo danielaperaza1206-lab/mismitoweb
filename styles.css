@@ -1,0 +1,64 @@
+body {  
+     font-family: Arial, sans-serif;
+     /*max-width: 900px; */
+     margin: 0;
+
+
+ background-image: url('img/fondoHermoso.jpg');
+    background-size: cover;          /* Estira la imagen para cubrir todo sin deformar */
+    background-position: center;     /* Centra la imagen de fondo */
+    background-repeat: no-repeat;    
+    background-attachment: fixed;    
+    background-color: #6A5ACD;
+    color: brown;
+ }
+
+ div{
+    margin: 2rem auto;
+    max-width: 900px;
+   
+ }
+
+header {
+    background-color:rgb(240, 216, 65); /* Hace el fondo invisible */
+    padding: 1rem 0;             /* Espaciado opcional */
+    font-size: 1.5rem;           /* Tamaño de fuente opcional */
+    font-weight: bold;
+    text-align: center;          /* Centra el texto si gustas */
+}
+
+
+ form {
+        background-color: rgba(210, 11, 18);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+    font-weight: bold;
+     }
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+     }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+     }
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+     }
+
+th {
+    background: #4a6fa5;
+    color: white;
+} 
